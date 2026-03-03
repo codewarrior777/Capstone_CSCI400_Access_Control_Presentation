@@ -89,3 +89,38 @@ This project was created for academic purposes for the CSCI400 course.
 ---
 
 ⭐ *If you like this project, don't forget to give it a star on GitHub* ⭐
+## 📱 Class Presentation Access
+
+<div align="center">
+  <h2>🎯 Scan QR Code for Live Demo</h2>
+  
+  <img src="qr-code.png" 
+       alt="QR Code for FinSecure Bank Presentation" 
+       width="300" 
+       style="border: 4px solid #00ff88; 
+              border-radius: 30px; 
+              padding: 10px; 
+              background: #0a0a0f; 
+              box-shadow: 0 0 30px rgba(0,255,136,0.7);">
+  
+  <h3>🏦 FinSecure Bank</h3>
+  <p><strong>Hybrid RBAC + ABAC Access Control Strategy</strong></p>
+  
+  <table align="center" style="margin: 20px auto;">
+    <tr>
+      <td>🔗 <strong>Live URL:</strong></td>
+      <td><code>https://codewarrior777.github.io/Capstone_CSCI400_Access_Control_Presentation/</code></td>
+    </tr>
+    <tr>
+      <td>📅 <strong>Presentation Date:</strong></td>
+      <td>March 2026</td>
+    </tr>
+    <tr>
+      <td>👨‍🎓 <strong>Student:</strong></td>
+      <td>[Your Name] - 4th Year Cybersecurity</td>
+    </tr>
+  </table>
+  
+  <p><em>✨ Futuristic design with neon and glitch effects ✨</em></p>
+  <p>📱 Fully responsive on mobile, tablet, and desktop</p>
+</div>
