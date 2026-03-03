@@ -117,7 +117,7 @@ This project was created for academic purposes for the CSCI400 course.
     </tr>
     <tr>
       <td>👨‍🎓 <strong>Student:</strong></td>
-      <td>[Your Name] - 4th Year Cybersecurity</td>
+      <td> Gustavo Ramos - 4th Year - Computer Science and Information Security - JJAY </td>
     </tr>
   </table>
   
