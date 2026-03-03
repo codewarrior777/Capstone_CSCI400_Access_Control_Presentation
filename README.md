@@ -117,7 +117,7 @@ This project was created for academic purposes for the CSCI400 course.
     </tr>
     <tr>
       <td>👨‍🎓 <strong>Student:</strong></td>
-      <td> Gustavo Ramos - 4th Year - Computer Science and Information Security - JJAY </td>
+      <td> Gustavo Ramos - 4th Year - Computer Science and Information Security - John Jay College of Criminal Justice </td>
     </tr>
   </table>
   
