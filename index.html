@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>FinSecure Bank | Futuristic Access Control</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas para efecto de fondo -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Partículas flotantes adicionales -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Líneas de grid futurista -->
+    <div class="grid-overlay"></div>
+    
+    <!-- Contenido principal -->
+    <div class="container">
+        <header>
+            <nav class="glow-nav">
+                <div class="logo">🏦 FinSecure Bank</div>
+                
+                <!-- Botón móvil hamburguesa -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#estrategia" data-en="Strategy" data-es="Estrategia">Estrategia</a></li>
+                    <li><a href="#comparacion" data-en="Comparison" data-es="Comparación">Comparación</a></li>
+                    <li><a href="#departamentos" data-en="Departments" data-es="Departamentos">Departamentos</a></li>
+                    <li><a href="#desafios" data-en="Challenges" data-es="Desafíos">Desafíos</a></li>
+                    <li><a href="#roadmap" data-en="Roadmap" data-es="Roadmap">Roadmap</a></li>
+                </ul>
+                
+                <!-- Selector de idioma -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section ESPECTACULAR -->
+            <section class="hero">
+                <div class="hero-glow"></div>
+                <h1 class="giant-glitch" data-text="HYBRID RBAC + ABAC">HYBRID RBAC + ABAC</h1>
+                <div class="subtitle neon-text">
+                    <span data-en="Access Control Strategy for FinSecure Bank" data-es="Estrategia de Control de Acceso para FinSecure Bank">Estrategia de Control de Acceso para FinSecure Bank</span>
+                </div>
+                
+                <!-- Stats -->
+                <div class="stats-container">
+                    <div class="stat-item giant-stat">
+                        <span class="stat-number">800</span>
+                        <span class="stat-label" data-en="Employees" data-es="Empleados">Empleados</span>
+                    </div>
+                    <div class="stat-item giant-stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label" data-en="Departments" data-es="Departamentos">Departamentos</span>
+                    </div>
+                    <div class="stat-item giant-stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label" data-en="Sensitivity Levels" data-es="Niveles de Sensibilidad">Niveles de Sensibilidad</span>
+                    </div>
+                </div>
+                
+                <!-- Quote -->
+                <div class="quote neon-box">
+                    <span class="quote-text">"</span>
+                    <span data-en="Roles determine where you can walk; attributes determine how far. Together, they ensure you never wander where you don't belong." 
+                          data-es="Los roles determinan dónde puedes caminar; los atributos determinan hasta dónde. Juntos, aseguran que nunca deambules donde no perteneces.">
+                    </span>
+                    <span class="quote-text">"</span>
+                </div>
+                
+                <!-- Botones -->
+                <div class="hero-buttons">
+                    <a href="#estrategia" class="btn btn-primary btn-giant">
+                        <span data-en="EXPLORE STRATEGY" data-es="EXPLORAR ESTRATEGIA">EXPLORAR ESTRATEGIA</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#departamentos" class="btn btn-outline btn-giant">
+                        <span data-en="VIEW DEPARTMENTS" data-es="VER DEPARTAMENTOS">VER DEPARTAMENTOS</span>
+                    </a>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator">
+                    <span data-en="Scroll" data-es="Desliza">Desliza</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </section>
+
+            <!-- Organización Section -->
+            <section id="organizacion" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="ORGANIZATION" data-es="ORGANIZACIÓN">ORGANIZACIÓN</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="org-grid futuristic-grid">
+                    <div class="org-card cyber-card">
+                        <div class="card-glow"></div>
+                        <h3 class="neon-subtitle">🏢 <span data-en="Departments" data-es="Departamentos">Departamentos</span></h3>
+                        <ul class="cyber-list">
+                            <li><span class="list-icon">💰</span> Finance</li>
+                            <li><span class="list-icon">👥</span> HR</li>
+                            <li><span class="list-icon">💻</span> IT</li>
+                            <li><span class="list-icon">📞</span> Customer Support</li>
+                            <li><span class="list-icon">👔</span> Executive Leadership</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="org-card cyber-card">
+                        <div class="card-glow"></div>
+                        <h3 class="neon-subtitle">📊 <span data-en="Data Types" data-es="Tipos de Datos">Tipos de Datos</span></h3>
+                        <ul class="cyber-list">
+                            <li><span class="list-icon high">🔴</span> <span data-en="Financial (high)" data-es="Financieros (alta)">Financieros (alta)</span></li>
+                            <li><span class="list-icon high">🔴</span> <span data-en="Employee PII (high)" data-es="PII Empleados (alta)">PII Empleados (alta)</span></li>
+                            <li><span class="list-icon high">🔴</span> <span data-en="Customer Data (high)" data-es="Datos Cliente (alta)">Datos Cliente (alta)</span></li>
+                            <li><span class="list-icon medium">🟡</span> <span data-en="Internal Comms (medium)" data-es="Comunicaciones internas (media)">Comunicaciones internas (media)</span></li>
+                            <li><span class="list-icon low">🟢</span> <span data-en="Public Materials (low)" data-es="Material público (baja)">Material público (baja)</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="org-card cyber-card">
+                        <div class="card-glow"></div>
+                        <h3 class="neon-subtitle">👤 <span data-en="Roles" data-es="Roles">Roles</span></h3>
+                        <ul class="cyber-list">
+                            <li>Entry-level</li>
+                            <li>Specialists</li>
+                            <li>Managers</li>
+                            <li>Directors</li>
+                            <li>Executives</li>
+                            <li>C-suite</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Estrategia Section -->
+            <section id="estrategia" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="HYBRID STRATEGY" data-es="ESTRATEGIA HÍBRIDA">ESTRATEGIA HÍBRIDA</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="strategy-showcase futuristic-showcase">
+                    <div class="strategy-card cyber-card rbac-card">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <h3 class="giant-card-title">RBAC</h3>
+                            <span class="badge neon-badge" data-en="FOUNDATION" data-es="FUNDACIÓN">FUNDACIÓN</span>
+                        </div>
+                        <p class="card-subtitle">Role-Based Access Control</p>
+                        <ul class="cyber-list">
+                            <li><i class="fas fa-check-circle"></i> <span data-en="Role-based permissions" data-es="Permisos basados en roles">Permisos basados en roles</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-en="Easy to manage" data-es="Fácil de gestionar">Fácil de gestionar</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-en="Maps to org structure" data-es="Mapeo organizacional">Mapeo organizacional</span></li>
+                        </ul>
+                        <div class="example-box">
+                            <span class="example-label" data-en="EXAMPLE" data-es="EJEMPLO">EJEMPLO</span>
+                            <p>"Finance Manager" has basic permissions </p>
+                        </div>
+                    </div>
+                    
+                    <div class="strategy-plus giant-plus">⚡</div>
+                    
+                    <div class="strategy-card cyber-card abac-card">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <h3 class="giant-card-title">ABAC</h3>
+                            <span class="badge neon-badge" data-en="FLEXIBILITY" data-es="FLEXIBILIDAD">FLEXIBILIDAD</span>
+                        </div>
+                        <p class="card-subtitle">Attribute-Based Access Control</p>
+                        <ul class="cyber-list">
+                            <li><i class="fas fa-check-circle"></i> <span data-en="Context-aware decisions" data-es="Decisiones contextuales">Decisiones contextuales</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-en="Granular control" data-es="Control granular">Control granular</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-en="Dynamic risk adjustment" data-es="Ajuste dinámico de riesgo">Ajuste dinámico de riesgo</span></li>
+                        </ul>
+                        <div class="example-box">
+                            <span class="example-label" data-en="EXAMPLE" data-es="EJEMPLO">EJEMPLO</span>
+                            <p>Time, location, device</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparación Table -->
+            <section id="comparacion" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="STRATEGY COMPARISON" data-es="COMPARACIÓN DE ESTRATEGIAS">COMPARACIÓN DE ESTRATEGIAS</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="table-container cyber-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-en="Strategy" data-es="Estrategia">Estrategia</th>
+                                <th data-en="Description" data-es="Descripción">Descripción</th>
+                                <th data-en="Pros" data-es="Pros">Pros</th>
+                                <th data-en="Cons" data-es="Contras">Contras</th>
+                                <th data-en="Fit" data-es="Ajuste">Ajuste</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><span class="neon-text-small">RBAC</span></td>
+                                <td data-en="Role-based access" data-es="Acceso basado en roles">Acceso basado en roles</td>
+                                <td data-en="Simple, manageable" data-es="Simple, manejable">Simple, manejable</td>
+                                <td data-en="Rigid, no context" data-es="Rígido, sin contexto">Rígido, sin contexto</td>
+                                <td><span class="badge-small good">✅ BASE</span></td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><span class="neon-text-small">ABAC</span></td>
+                                <td data-en="Attribute-based" data-es="Basado en atributos">Basado en atributos</td>
+                                <td data-en="Flexible, granular" data-es="Flexible, granular">Flexible, granular</td>
+                                <td data-en="Complex to implement" data-es="Complejo">Complejo</td>
+                                <td><span class="badge-small good">✅ FLEX</span></td>
+                            </tr>
+                            <tr>
+                                <td>MAC</td>
+                                <td data-en="Central labels" data-es="Etiquetas centrales">Etiquetas centrales</td>
+                                <td data-en="Very secure" data-es="Muy seguro">Muy seguro</td>
+                                <td data-en="Inflexible" data-es="Inflexible">Inflexible</td>
+                                <td><span class="badge-small bad">❌ NO</span></td>
+                            </tr>
+                            <tr>
+                                <td>DAC</td>
+                                <td data-en="Owner controls" data-es="Dueño controla">Dueño controla</td>
+                                <td data-en="Flexible" data-es="Flexible">Flexible</td>
+                                <td data-en="Risky" data-es="Riesgoso">Riesgoso</td>
+                                <td><span class="badge-small bad">❌ NO</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Ejemplos -->
+            <section id="ejemplos" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="ACCESS DECISIONS" data-es="DECISIONES DE ACCESO">DECISIONES DE ACCESO</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="examples-grid futuristic-grid">
+                    <div class="example-card cyber-card example-denied">
+                        <div class="card-glow"></div>
+                        <div class="example-icon"><i class="fas fa-times-circle"></i></div>
+                        <div class="example-content">
+                            <h3>Finance Analyst</h3>
+                            <p class="action">view customer data</p>
+                            <div class="access-rules">
+                                <div class="rule rbac">RBAC: <span data-en="Has read access" data-es="Tiene acceso">Tiene acceso</span></div>
+                                <div class="rule abac">ABAC: 2 AM <span data-en="(unusual)" data-es="(inusual)">(inusual)</span></div>
+                            </div>
+                            <div class="result-badge denied">
+                                <span data-en="BLOCKED + ALERT" data-es="BLOQUEADO + ALERTA">BLOQUEADO + ALERTA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card cyber-card example-granted">
+                        <div class="card-glow"></div>
+                        <div class="example-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="example-content">
+                            <h3>HR Manager</h3>
+                            <p class="action">access payroll</p>
+                            <div class="access-rules">
+                                <div class="rule rbac">RBAC: <span data-en="Has access" data-es="Tiene acceso">Tiene acceso</span></div>
+                                <div class="rule abac">ABAC: <span data-en="Office + Company device" data-es="Oficina + Dispositivo empresa">Oficina + Dispositivo empresa</span></div>
+                            </div>
+                            <div class="result-badge granted">
+                                <span data-en="GRANTED" data-es="PERMITIDO">PERMITIDO</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card cyber-card example-conditional">
+                        <div class="card-glow"></div>
+                        <div class="example-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="example-content">
+                            <h3>Executive</h3>
+                            <p class="action">view merger docs</p>
+                            <div class="access-rules">
+                                <div class="rule rbac">RBAC: <span data-en="Has access" data-es="Tiene acceso">Tiene acceso</span></div>
+                                <div class="rule abac">ABAC: <span data-en="Requires MFA + Secure device" data-es="Requiere MFA + Dispositivo seguro">Requiere MFA + Dispositivo seguro</span></div>
+                            </div>
+                            <div class="result-badge conditional">
+                                <span data-en="CONDITIONAL" data-es="CONDICIONAL">CONDICIONAL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Desafíos -->
+            <section id="desafios" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="CHALLENGES & SOLUTIONS" data-es="DESAFÍOS Y SOLUCIONES">DESAFÍOS Y SOLUCIONES</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="challenges-grid futuristic-grid">
+                    <div class="challenge-card cyber-card">
+                        <div class="challenge-number">01</div>
+                        <h3 data-en="ROLE EXPLOSION" data-es="EXPLOSIÓN DE ROLES">EXPLOSIÓN DE ROLES</h3>
+                        <p class="problem">"Finance Manager East Coast" vs "West Coast"</p>
+                        <div class="solution-box">
+                            <h4 data-en="SOLUTION" data-es="SOLUCIÓN">SOLUCIÓN</h4>
+                            <ul>
+                                <li>⚡ Role engineering</li>
+                                <li>⚡ Hierarchy of roles</li>
+                                <li>⚡ Quarterly reviews</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card cyber-card">
+                        <div class="challenge-number">02</div>
+                        <h3 data-en="POLICY COMPLEXITY" data-es="COMPLEJIDAD DE POLÍTICAS">COMPLEJIDAD DE POLÍTICAS</h3>
+                        <p class="problem">"Spaghetti code" de políticas ABAC</p>
+                        <div class="solution-box">
+                            <h4 data-en="SOLUTION" data-es="SOLUCIÓN">SOLUCIÓN</h4>
+                            <ul>
+                                <li>⚡ Policy-as-code (Git)</li>
+                                <li>⚡ Simulation pre-deploy</li>
+                                <li>⚡ Centralized management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card cyber-card">
+                        <div class="challenge-number">03</div>
+                        <h3 data-en="SYSTEM INTEGRATION" data-es="INTEGRACIÓN DE SISTEMAS">INTEGRACIÓN DE SISTEMAS</h3>
+                        <p class="problem">HRIS, core banking, CRM</p>
+                        <div class="solution-box">
+                            <h4 data-en="SOLUTION" data-es="SOLUCIÓN">SOLUCIÓN</h4>
+                            <ul>
+                                <li>⚡ Arquitecture PDP/PEP</li>
+                                <li>⚡ XACML/ALFA</li>
+                                <li>⚡ Phased implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card cyber-card">
+                        <div class="challenge-number">04</div>
+                        <h3 data-en="EMPLOYEE RESISTANCE" data-es="RESISTENCIA DE EMPLEADOS">RESISTENCIA DE EMPLEADOS</h3>
+                        <p class="problem">"Esto me ralentiza"</p>
+                        <div class="solution-box">
+                            <h4 data-en="SOLUTION" data-es="SOLUCIÓN">SOLUCIÓN</h4>
+                            <ul>
+                                <li>⚡ Involucrar jefes</li>
+                                <li>⚡ Pilot program</li>
+                                <li>⚡ Faster feedback </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card cyber-card">
+                        <div class="challenge-number">05</div>
+                        <h3 data-en="ATTRIBUTE MANAGEMENT" data-es="GESTIÓN DE ATRIBUTOS">GESTIÓN DE ATRIBUTOS</h3>
+                        <p class="problem">Datos incorrectos = decisiones incorrectas</p>
+                        <div class="solution-box">
+                            <h4 data-en="SOLUTION" data-es="SOLUCIÓN">SOLUCIÓN</h4>
+                            <ul>
+                                <li>⚡ Automated sources</li>
+                                <li>⚡ Regular validation</li>
+                                <li>⚡ Default-deny</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sensibilidad -->
+            <section id="sensibilidad" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="SENSITIVITY LEVELS" data-es="NIVELES DE SENSIBILIDAD">NIVELES DE SENSIBILIDAD</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="sensitivity-grid futuristic-grid">
+                    <div class="level-card cyber-card critical-level">
+                        <div class="level-header">
+                            <span class="level-icon">🔴</span>
+                            <span class="level-name" data-en="CRITICAL" data-es="CRÍTICO">CRÍTICO</span>
+                        </div>
+                        <p data-en="Mergers, CEO credentials, board" data-es="Fusiones, credenciales CEO, juntas">Fusiones, credenciales CEO, juntas</p>
+                        <div class="level-access">Executive + MFA + Oficina + Aprobación</div>
+                        <div class="level-layers">Hardware keys + IP whitelist + Session recording</div>
+                    </div>
+                    
+                    <div class="level-card cyber-card high-level">
+                        <div class="level-header">
+                            <span class="level-icon">🟠</span>
+                            <span class="level-name" data-en="HIGH" data-es="ALTO">ALTO</span>
+                        </div>
+                        <p data-en="Customer financials, PII" data-es="Datos financieros, PII">Datos financieros, PII</p>
+                        <div class="level-access">Rol + MFA + Dispositivo compliant</div>
+                        <div class="level-layers">Field encryption level + Data masking</div>
+                    </div>
+                    
+                    <div class="level-card cyber-card medium-level">
+                        <div class="level-header">
+                            <span class="level-icon">🟡</span>
+                            <span class="level-name" data-en="MEDIUM" data-es="MEDIO">MEDIO</span>
+                        </div>
+                        <p data-en="Internal memos, reports" data-es="Memos internos, reportes">Memos internos, reportes</p>
+                        <div class="level-access">Departament + MFA estándar</div>
+                        <div class="level-layers">VPN</div>
+                    </div>
+                    
+                    <div class="level-card cyber-card low-level">
+                        <div class="level-header">
+                            <span class="level-icon">🟢</span>
+                            <span class="level-name" data-en="LOW" data-es="BAJO">BAJO</span>
+                        </div>
+                        <p data-en="Public materials" data-es="Material público">Material público</p>
+                        <div class="level-access" data-en="No authentication" data-es="Sin autenticación">Sin autenticación</div>
+                        <div class="level-layers">Basic web security</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Defense in Depth -->
+            <section class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="DEFENSE IN DEPTH" data-es="DEFENSA EN PROFUNDIDAD">DEFENSA EN PROFUNDIDAD</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="defense-chain futuristic-chain">
+                    <div class="chain-item">
+                        <div class="chain-icon">📀</div>
+                        <div class="chain-title" data-en="DATA" data-es="DATOS">DATOS</div>
+                        <div class="chain-desc">AES-256</div>
+                    </div>
+                    <div class="chain-arrow">→</div>
+                    <div class="chain-item">
+                        <div class="chain-icon">🔐</div>
+                        <div class="chain-title" data-en="ENCRYPTION" data-es="ENCRIPTACIÓN">ENCRIPTACIÓN</div>
+                        <div class="chain-desc">AES-256</div>
+                    </div>
+                    <div class="chain-arrow">→</div>
+                    <div class="chain-item">
+                        <div class="chain-icon">🎯</div>
+                        <div class="chain-title" data-en="ACCESS" data-es="ACCESO">ACCESO</div>
+                        <div class="chain-desc">RBAC/ABAC</div>
+                    </div>
+                    <div class="chain-arrow">→</div>
+                    <div class="chain-item">
+                        <div class="chain-icon">🔑</div>
+                        <div class="chain-title" data-en="AUTH" data-es="AUTENTICACIÓN">AUTENTICACIÓN</div>
+                        <div class="chain-desc">MFA/FIDO2</div>
+                    </div>
+                    <div class="chain-arrow">→</div>
+                    <div class="chain-item">
+                        <div class="chain-icon">📊</div>
+                        <div class="chain-title" data-en="MONITOR" data-es="MONITOREO">MONITOREO</div>
+                        <div class="chain-desc">SIEM/UEBA</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap -->
+            <section id="roadmap" class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="IMPLEMENTATION ROADMAP" data-es="ROADMAP DE IMPLEMENTACIÓN">ROADMAP DE IMPLEMENTACIÓN</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="roadmap futuristic-roadmap">
+                    <div class="phase">
+                        <div class="phase-number">1</div>
+                        <div class="phase-content">
+                            <h3 data-en="PHASE 1" data-es="FASE 1">FASE 1</h3>
+                            <p class="phase-title" data-en="BASIC RBAC" data-es="RBAC BÁSICO">RBAC BÁSICO</p>
+                            <p class="phase-desc" data-en="Role discovery, core systems" data-es="Descubrimiento de roles, sistemas core">Descubrimiento de roles, sistemas core</p>
+                            <p class="phase-time">Meses 1-3</p>
+                        </div>
+                    </div>
+                    
+                    <div class="phase">
+                        <div class="phase-number">2</div>
+                        <div class="phase-content">
+                            <h3 data-en="PHASE 2" data-es="FASE 2">FASE 2</h3>
+                            <p class="phase-title" data-en="ATTRIBUTES + DESIGN" data-es="ATRIBUTOS + DISEÑO">ATRIBUTOS + DISEÑO</p>
+                            <p class="phase-desc" data-en="Attribute sources, policies" data-es="Fuentes de atributos, políticas">Fuentes de atributos, políticas</p>
+                            <p class="phase-time">Meses 4-6</p>
+                        </div>
+                    </div>
+                    
+                    <div class="phase">
+                        <div class="phase-number">3</div>
+                        <div class="phase-content">
+                            <h3 data-en="PHASE 3" data-es="FASE 3">FASE 3</h3>
+                            <p class="phase-title" data-en="ABAC PILOT" data-es="PILOTO ABAC">PILOTO ABAC</p>
+                            <p class="phase-desc" data-en="One department, feedback" data-es="Un departamento, feedback">Un departamento, feedback</p>
+                            <p class="phase-time">Meses 7-9</p>
+                        </div>
+                    </div>
+                    
+                    <div class="phase">
+                        <div class="phase-number">4</div>
+                        <div class="phase-content">
+                            <h3 data-en="PHASE 4" data-es="FASE 4">FASE 4</h3>
+                            <p class="phase-title" data-en="FULL DEPLOYMENT" data-es="DEPLOY COMPLETO">DEPLOY COMPLETO</p>
+                            <p class="phase-desc" data-en="Training, monitoring" data-es="Entrenamiento, monitoreo">Entrenamiento, monitoreo</p>
+                            <p class="phase-time">Meses 10-12</p>
+                        </div>
+                    </div>
+                    
+                    <div class="phase">
+                        <div class="phase-number">5</div>
+                        <div class="phase-content">
+                            <h3 data-en="PHASE 5" data-es="FASE 5">FASE 5</h3>
+                            <p class="phase-title" data-en="OPTIMIZATION" data-es="OPTIMIZACIÓN">OPTIMIZACIÓN</p>
+                            <p class="phase-desc" data-en="Quarterly reviews" data-es="Revisiones trimestrales">Revisiones trimestrales</p>
+                            <p class="phase-time" data-en="ONGOING" data-es="CONTINUO">CONTINUO</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compliance -->
+            <section class="section">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="COMPLIANCE" data-es="CUMPLIMIENTO">CUMPLIMIENTO</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="compliance-grid futuristic-grid">
+                    <div class="compliance-card cyber-card">
+                        <div class="compliance-icon">🇪🇺</div>
+                        <h3>GDPR</h3>
+                        <p class="requirement">Art. 25</p>
+                        <p class="implementation" data-en="ABAC ensures minimum access" data-es="ABAC asegura mínimo acceso">ABAC asegura mínimo acceso</p>
+                    </div>
+                    
+                    <div class="compliance-card cyber-card">
+                        <div class="compliance-icon">💳</div>
+                        <h3>PCI-DSS</h3>
+                        <p class="requirement">Req. 7</p>
+                        <p class="implementation" data-en="RBAC + MFA for payments" data-es="RBAC + MFA para pagos">RBAC + MFA para pagos</p>
+                    </div>
+                    
+                    <div class="compliance-card cyber-card">
+                        <div class="compliance-icon">📈</div>
+                        <h3>SOX</h3>
+                        <p class="requirement">Sec. 404</p>
+                        <p class="implementation" data-en="Separation of duties" data-es="Separación de funciones">Separación de funciones</p>
+                    </div>
+                    
+                    <div class="compliance-card cyber-card">
+                        <div class="compliance-icon">🏦</div>
+                        <h3>GLBA</h3>
+                        <p class="requirement">Safeguards</p>
+                        <p class="implementation" data-en="Comprehensive controls" data-es="Controles integrales">Controles integrales</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="section conclusion">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="CONCLUSION" data-es="CONCLUSIÓN">CONCLUSIÓN</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="conclusion-content cyber-card">
+                    <p class="giant-text" data-en="The hybrid RBAC-ABAC model provides the perfect balance for FinSecure Bank:" data-es="El modelo híbrido RBAC-ABAC proporciona el equilibrio perfecto para FinSecure Bank:">
+                        El modelo híbrido RBAC-ABAC proporciona el equilibrio perfecto para FinSecure Bank:
+                    </p>
+                    <ul>
+                        <li><span class="highlight">RBAC</span> <span data-en="gives structure and simplicity" data-es="da estructura y simplicidad">da estructura y simplicidad</span></li>
+                        <li><span class="highlight">ABAC</span> <span data-en="adds contextual intelligence" data-es="añade inteligencia contextual">añade inteligencia contextual</span></li>
+                    </ul>
+                    <p class="final-message" data-en="This approach protects sensitive data while letting employees work efficiently." data-es="Este enfoque protege datos sensibles mientras permite a los empleados trabajar eficientemente.">
+                        Este enfoque protege datos sensibles mientras permite a los empleados trabajar eficientemente.
+                    </p>
+                </div>
+            </section>
+
+            <!-- References -->
+            <section class="section references">
+                <h2 class="section-title giant-title">
+                    <span class="title-glow">⚡</span>
+                    <span data-en="REFERENCES" data-es="REFERENCIAS">REFERENCIAS</span>
+                    <span class="title-glow">⚡</span>
+                </h2>
+                
+                <div class="references-content cyber-card">
+                    <ol>
+                        <li>Sandhu, R. et al. (1996). Role-Based Access Control Models. <em>IEEE Computer</em>.</li>
+                        <li>Hu, V. et al. (2014). <em>Guide to ABAC</em> (NIST SP 800-162).</li>
+                        <li>OASIS. (2013). <em>XACML Version 3.0</em>.</li>
+                        <li>Ferraiolo, D. et al. (2007). <em>Role-Based Access Control</em>.</li>
+                        <li>NIST. (2020). <em>Digital Identity Guidelines</em> (SP 800-63B).</li>
+                        <li>PCI Council. (2022). <em>PCI-DSS v4.0</em>, Req. 7.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="cyber-footer">
+                <p>© 2026 FinSecure Bank - <span data-en="Access Control Strategy" data-es="Estrategia de Control de Acceso">Estrategia de Control de Acceso</span></p>
+                <p><span data-en="Presented by" data-es="Presentado por">Presentado por</span> Gustavo G. Ramos - 4th Year Computer Science and Information Security - JOHN JAY COLLEGE OF CRIMINAL JUSTICE</p>
+                <div class="footer-glow"></div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
